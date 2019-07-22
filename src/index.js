@@ -9,16 +9,16 @@ export default (ComposedComponent) => {
     constructor() {
       super();
       this.state = {
-        width: document ? document.body.clientWidth : null,
-        height: document ? document.body.clientHeight : null,
+        width: (typeof(document) != 'undefined' && document != null) ? document.body.clientWidth : null,
+        height: (typeof(document) != 'undefined' && document != null) ? document.body.clientHeight : null,
       };
     }
 
     handleResize() {
       // set initial state
       this.setState({
-        width: document ? document.body.clientWidth : null,
-        height: document ? document.body.clientHeight : null,
+        width: (typeof(document) != 'undefined' && document != null) ? document.body.clientWidth : null,
+        height: (typeof(document) != 'undefined' && document != null) ? document.body.clientHeight : null,
       });
     }
 

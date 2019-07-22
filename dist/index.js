@@ -97,8 +97,8 @@
         var _this = _possibleConstructorReturn(this, (windowSize.__proto__ || Object.getPrototypeOf(windowSize)).call(this));
 
         _this.state = {
-          width: document ? document.body.clientWidth : null,
-          height: document ? document.body.clientHeight : null
+          width: typeof document != 'undefined' && document != null ? document.body.clientWidth : null,
+          height: typeof document != 'undefined' && document != null ? document.body.clientHeight : null
         };
         return _this;
       }
@@ -108,8 +108,8 @@
         value: function handleResize() {
           // set initial state
           this.setState({
-            width: document ? document.body.clientWidth : null,
-            height: document ? document.body.clientHeight : null
+            width: typeof document != 'undefined' && document != null ? document.body.clientWidth : null,
+            height: typeof document != 'undefined' && document != null ? document.body.clientHeight : null
           });
         }
       }, {
