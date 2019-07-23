@@ -26,7 +26,7 @@ export default (ComposedComponent) => {
       // bind window resize listeners
       this._handleResize = this.handleResize.bind(this);
       window.addEventListener('resize', this._handleResize);
-      setTimeout(this._handleResize, 1000);
+      setTimeout(this._handleResize, 100);
     }
 
     componentWillUnmount() {
